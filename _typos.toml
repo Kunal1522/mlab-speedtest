@@ -1,0 +1,27 @@
+# Typos spell checker configuration
+# https://github.com/crate-ci/typos
+
+[default]
+extend-ignore-re = [
+  # Ignore hex colors
+  "#[0-9a-fA-F]{3,8}",
+  # Ignore URLs
+  "https?://[^\\s]+",
+]
+
+[files]
+extend-exclude = [
+  "*.min.js",
+  "*.min.css",
+  "node_modules/",
+  "package-lock.json",
+  ".git/",
+]
+
+[default.extend-words]
+# Add project-specific words that are correct but flagged as typos
+NDT = "NDT"
+ndt = "ndt"
+mlab = "mlab"
+gaugeService = "gaugeService"
+msak = "msak"
